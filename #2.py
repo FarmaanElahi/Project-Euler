@@ -13,10 +13,7 @@ T = int(input())
 
 def main():
     for _ in range(T):
-        res = 0
-        for x in fibonacci(int(input())):
-            res += x
-        print(res)
+        print(sum([x for x in fibonacci(int(input())) if x % 2 == 0]))
 
 
 if __name__ == '__main__':

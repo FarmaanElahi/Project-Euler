@@ -2,10 +2,9 @@ def natural_number_sum(number):
     return number * (number + 1) // 2
 
 
-def fibonacci(n):
+def fibonacci(maxi=4 * 10 ** 16):
     a = 0
     b = 1
-    while a + b < n:
+    while a + b < maxi:
         a, b = b, a + b
-        if b % 2 == 0:
-            yield b
+        yield b

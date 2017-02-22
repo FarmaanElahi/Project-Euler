@@ -17,4 +17,18 @@ def smallest_factor(n):
     return n
 
 
+def largest_prime_factor(n):
+    while True:
 
+        factor = smallest_factor(n)
+
+        if n > factor:
+            n //= factor
+        else:
+            return n
+
+
+def generate_prime(start=2, end=100):
+    for x in range(start, end):
+        if (2 ** x - 2) % x == 0:
+            yield x
